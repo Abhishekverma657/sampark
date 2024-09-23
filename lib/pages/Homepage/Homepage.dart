@@ -8,6 +8,7 @@ import 'package:sampark/Config/Strings.dart';
 import 'package:sampark/Controller/ProfileController.dart';
 import 'package:sampark/pages/Homepage/widgets/ChatList.dart';
 import 'package:sampark/pages/Homepage/widgets/TabBar.dart';
+import 'package:sampark/pages/ProfilePage/ProfilePage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -32,9 +33,11 @@ class _HomePageState extends State<HomePage>  with TickerProviderStateMixin{
          actions: [
            IconButton(onPressed: (){
  }, icon:  Icon(Icons.search)),
-           IconButton(onPressed: (){
+           IconButton(onPressed: ()async{
 
-                       Get.toNamed("/profilePage");
+                      //  Get.toNamed("/profilePage");
+                    await   profileController.getUserDetails();
+                      Get.to(ProfilePage());
            }, icon:  Icon(Icons.more_vert)),
            
          ],

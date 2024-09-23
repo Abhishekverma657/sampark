@@ -3,10 +3,14 @@ class UserModel {
   String? id;
   String? name;
   String? email;
-  String? phone;
   String? profileImage;
+  String? phoneNumber;
+  String? about;
+  String? createdAt;
+  String? lastOnlineStatus;
+  String? status;
 
-  UserModel({this.id, this.name, this.email, this.phone, this.profileImage});
+  UserModel({this.id, this.name, this.email, this.profileImage, this.phoneNumber, this.about, this.createdAt, this.lastOnlineStatus, this.status});
 
   UserModel.fromJson(Map<String, dynamic> json) {
     if(json["id"] is String) {
@@ -18,11 +22,23 @@ class UserModel {
     if(json["email"] is String) {
       email = json["email"];
     }
-    if(json["phone"] is String) {
-      phone = json["phone"];
-    }
     if(json["profileImage"] is String) {
       profileImage = json["profileImage"];
+    }
+    if(json["phoneNumber"] is String) {
+      phoneNumber = json["phoneNumber"];
+    }
+    if(json["about"] is String) {
+      about = json["about"];
+    }
+    if(json["CreatedAt"] is String) {
+      createdAt = json["CreatedAt"];
+    }
+    if(json["LastOnlineStatus"] is String) {
+      lastOnlineStatus = json["LastOnlineStatus"];
+    }
+    if(json["Status"] is String) {
+      status = json["Status"];
     }
   }
 
@@ -31,8 +47,12 @@ class UserModel {
     _data["id"] = id;
     _data["name"] = name;
     _data["email"] = email;
-    _data["phone"] = phone;
     _data["profileImage"] = profileImage;
+    _data["phoneNumber"] = phoneNumber;
+    _data["about"] = about;
+    _data["CreatedAt"] = createdAt;
+    _data["LastOnlineStatus"] = lastOnlineStatus;
+    _data["Status"] = status;
     return _data;
   }
 }
