@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "606616170261",
+    "project_id": "sampark-social-app",
+    "storage_bucket": "sampark-social-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:606616170261:android:d4a5173fa031288fb7031c",
+        "android_client_info": {
+          "package_name": "com.example.sampark"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuhPSJZ1Jwl36tax0LnDZNEPcUPSMMbkY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
